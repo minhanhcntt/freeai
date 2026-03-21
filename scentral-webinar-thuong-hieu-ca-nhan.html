@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webinar Miễn Phí: Xây Dựng Thương Hiệu Cá Nhân Trên TikTok — S Central</title>
+<meta name="description" content="Tham gia webinar miễn phí của S Central: học cách xây thương hiệu cá nhân từ 0, tạo content authority, và monetize trên TikTok. Đăng ký giữ chỗ ngay.">
+<meta property="og:title" content="Webinar: Xây Dựng Thương Hiệu Cá Nhân Trên TikTok — S Central">
+<meta property="og:description" content="90 phút thực chiến — từ 0 follower đến KOC có thu nhập. Hoàn toàn miễn phí.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0D4F4F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --teal:        #0D4F4F;
+  --teal-mid:    #1A7A6E;
+  --teal-light:  #2BBFA8;
+  --fire:        #FF4E00;
+  --orange:      #FF8C00;
+  --gold:        #FFB800;
+  --black:       #0A0A0A;
+  --card:        #111111;
+  --card2:       #161616;
+  --g700:        #2A2A2A;
+  --g500:        #555;
+  --g300:        #999;
+  --g100:        #E8E8E8;
+  --white:       #FFFFFF;
+  --cream:       #FFF8F2;
+  --font-head:   'Barlow Condensed', sans-serif;
+  --font-body:   'Be Vietnam Pro', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NAVBAR ── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,78,0,0.12);
+  padding: 0 clamp(20px, 5vw, 60px);
+  height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--font-head);
+  font-size: 22px; letter-spacing: 3px;
+  color: var(--fire);
+}
+.nav-cta {
+  background: var(--fire); color: var(--white);
+  border: none; border-radius: 6px;
+  padding: 8px 18px; font-size: 13px; font-weight: 600;
+  font-family: var(--font-body); cursor: pointer;
+  transition: opacity .15s;
+  text-decoration: none; display: inline-block;
+}
+.nav-cta:hover { opacity: .88; }
+
+/* ── LAYOUT ── */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--teal);
+  padding: clamp(48px, 8vw, 80px) clamp(20px, 5vw, 60px) clamp(40px, 6vw, 64px);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: 'S';
+  font-family: var(--font-head);
+  font-size: clamp(200px, 35vw, 420px);
+  position: absolute; right: -2vw; top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,184,0,0.06);
+  line-height: 1; pointer-events: none;
+  letter-spacing: -10px;
+}
+.hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.live-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--fire);
+  animation: blink 1.5s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
+.eyebrow-text {
+  font-size: 11px; letter-spacing: .1em; font-weight: 600;
+  color: rgba(255,255,255,0.5); text-transform: uppercase;
+}
+.badge-free {
+  background: var(--fire); color: var(--white);
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  padding: 4px 12px; border-radius: 20px;
+  text-transform: uppercase;
+}
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(36px, 6vw, 68px);
+  font-weight: 700; line-height: 1.05;
+  letter-spacing: .5px;
+  margin-bottom: 18px;
+}
+.hero h1 em { color: var(--gold); font-style: normal; }
+.hero-sub {
+  font-size: clamp(14px, 2vw, 17px);
+  color: rgba(255,255,255,0.62);
+  line-height: 1.7; max-width: 620px;
+  margin-bottom: 28px;
+}
+.hero-details {
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.detail-pill {
+  display: flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; padding: 7px 13px;
+  font-size: 13px; color: rgba(255,255,255,0.8);
+}
+.detail-pill svg { flex-shrink: 0; opacity: .7; }
+
+/* ── COUNTDOWN ── */
+.countdown-section {
+  background: var(--card); border-bottom: 1px solid var(--g700);
+  padding: 28px clamp(20px,5vw,60px);
+}
+.cd-inner { max-width: 860px; margin: 0 auto; }
+.cd-label {
+  font-size: 11px; font-weight: 600; letter-spacing: .1em;
+  color: var(--g300); text-transform: uppercase;
+  margin-bottom: 14px; text-align: center;
+}
+.cd-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 10px; max-width: 480px; margin: 0 auto;
+}
+.cd-unit {
+  background: var(--card2); border: 1px solid var(--g700);
+  border-radius: 10px; padding: 14px 8px; text-align: center;
+}
+.cd-num {
+  font-family: var(--font-head);
+  font-size: clamp(36px, 6vw, 52px);
+  font-weight: 700; color: var(--fire);
+  line-height: 1; letter-spacing: 1px;
+}
+.cd-name {
+  font-size: 10px; color: var(--g300);
+  letter-spacing: .1em; text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* ── MAIN SECTIONS ── */
+.main { padding: clamp(32px,5vw,60px) clamp(20px,5vw,60px); }
+.main-inner { max-width: 860px; margin: 0 auto; }
+
+.sec { margin-bottom: clamp(40px, 6vw, 60px); }
+
+.sec-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  color: var(--fire); text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+.sec-label::before {
+  content: ''; display: block;
+  width: 24px; height: 2px; background: var(--fire);
+  flex-shrink: 0;
+}
+
+/* ── LEARN GRID ── */
+.learn-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media(max-width:560px) { .learn-grid { grid-template-columns: 1fr; } }
+.learn-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--card); border: 1px solid var(--g700);
+  border-radius: 10px; padding: 14px 16px;
+  transition: border-color .2s;
+}
+.learn-item:hover { border-color: var(--teal-mid); }
+.learn-check {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(43,191,168,0.15);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.learn-check svg { width: 12px; height: 12px; }
+.learn-text { font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.5; }
+
+/* ── FOR WHO ── */
+.who-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+@media(max-width:560px) { .who-grid { grid-template-columns: 1fr 1fr; } }
+.who-card {
+  background: var(--card); border: 1px solid var(--g700);
+  border-radius: 10px; padding: 16px 14px; text-align: center;
+  transition: border-color .2s, background .2s;
+}
+.who-card:hover { border-color: var(--teal-mid); background: var(--card2); }
+.who-emoji { font-size: 24px; margin-bottom: 8px; display: block; }
+.who-name { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+.who-sub { font-size: 11px; color: var(--g300); line-height: 1.4; }
+
+/* ── AGENDA ── */
+.agenda-list { display: flex; flex-direction: column; position: relative; }
+.ag-item {
+  display: flex; gap: 16px; padding: 0 0 28px;
+  position: relative;
+}
+.ag-item:last-child { padding-bottom: 0; }
+.ag-left { display: flex; flex-direction: column; align-items: center; gap: 0; flex-shrink: 0; }
+.ag-time {
+  font-family: var(--font-head);
+  font-size: 16px; font-weight: 700;
+  color: var(--fire); min-width: 52px; text-align: center;
+  padding-top: 2px;
+}
+.ag-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--teal-mid); border: 2px solid var(--teal);
+  margin: 6px auto 0; flex-shrink: 0;
+}
+.ag-line {
+  width: 1px; background: var(--g700);
+  flex: 1; min-height: 20px; margin: 4px auto 0;
+}
+.ag-item:last-child .ag-line { display: none; }
+.ag-body { flex: 1; padding-top: 2px; }
+.ag-title { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.ag-desc { font-size: 13px; color: var(--g300); line-height: 1.55; }
+
+/* ── SPEAKER ── */
+.speaker-wrap {
+  background: var(--card); border: 1px solid var(--g700);
+  border-radius: 12px; padding: 24px;
+}
+.speaker-top { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.speaker-avatar {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--teal); border: 2px solid var(--teal-mid);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head); font-size: 26px; font-weight: 700;
+  color: var(--gold); flex-shrink: 0;
+}
+.speaker-name { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+.speaker-role { font-size: 13px; color: var(--teal-light); }
+.speaker-bio { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.7; margin-bottom: 20px; }
+.speaker-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.sp-stat {
+  background: var(--card2); border: 1px solid var(--g700);
+  border-radius: 8px; padding: 12px 8px; text-align: center;
+}
+.sp-stat-n { font-family: var(--font-head); font-size: 24px; font-weight: 700; color: var(--teal-light); }
+.sp-stat-l { font-size: 11px; color: var(--g300); margin-top: 3px; }
+
+/* ── SOCIAL PROOF ── */
+.proof-bar {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card); border: 1px solid var(--g700);
+  border-radius: 10px; padding: 12px 16px;
+  margin-bottom: 32px;
+}
+.proof-avatars { display: flex; }
+.proof-av {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 2px solid var(--card);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: var(--white);
+  margin-left: -8px; flex-shrink: 0;
+}
+.proof-av:first-child { margin-left: 0; }
+.proof-text { font-size: 13px; color: var(--g300); line-height: 1.4; }
+.proof-text strong { color: var(--white); }
+
+/* ── FORM ── */
+.form-section {
+  background: var(--teal);
+  padding: clamp(32px,5vw,60px) clamp(20px,5vw,60px);
+}
+.form-inner { max-width: 560px; margin: 0 auto; }
+.form-header { text-align: center; margin-bottom: 28px; }
+.form-header h2 {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700; color: var(--white);
+  margin-bottom: 8px;
+}
+.form-header p { font-size: 15px; color: rgba(255,255,255,.65); }
+.form-header .spots {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,78,0,0.2); border: 1px solid rgba(255,78,0,0.4);
+  border-radius: 20px; padding: 5px 14px;
+  font-size: 13px; color: #FFCDB3;
+  margin-top: 10px;
+}
+.form-card-wrap {
+  background: var(--white); border-radius: 14px;
+  padding: 28px 28px 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.spots-alert {
+  display: flex; align-items: center; gap: 8px;
+  background: #FFF8F5; border: 1px solid #FFCDB3;
+  border-radius: 8px; padding: 9px 12px;
+  margin-bottom: 18px;
+}
+.sa-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--fire); flex-shrink: 0; animation: blink 1.5s infinite; }
+.sa-text { font-size: 12px; color: #7A3000; line-height: 1.4; }
+.fld { margin-bottom: 14px; }
+.fld label {
+  display: block; font-size: 12px; font-weight: 600;
+  color: #444; margin-bottom: 6px; letter-spacing: .02em;
+}
+.req { color: var(--fire); }
+.fld input, .fld select {
+  width: 100%; padding: 10px 13px;
+  border: 1.5px solid #E0E0E0; border-radius: 8px;
+  font-size: 14px; font-family: var(--font-body);
+  background: var(--white); color: var(--black);
+  outline: none; transition: border-color .15s, box-shadow .15s;
+}
+.fld input:focus, .fld select:focus {
+  border-color: var(--teal); box-shadow: 0 0 0 3px rgba(13,79,79,.1);
+}
+.fld input.err, .fld select.err {
+  border-color: #E24B4A; box-shadow: 0 0 0 3px rgba(226,75,74,.08);
+}
+.errmsg { font-size: 11px; color: #E24B4A; margin-top: 4px; display: none; }
+.errmsg.on { display: block; }
+.goal-label { font-size: 12px; font-weight: 600; color: #444; margin-bottom: 8px; }
+.goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+@media(max-width:420px) { .goal-grid { grid-template-columns: 1fr; } }
+.g-chip {
+  display: flex; align-items: center; gap: 8px;
+  padding: 9px 11px; border: 1.5px solid #E0E0E0;
+  border-radius: 8px; cursor: pointer; user-select: none;
+  font-size: 12px; color: #444; transition: all .15s;
+  background: var(--white); font-family: var(--font-body);
+}
+.g-chip:hover { border-color: var(--teal); background: #F0F9F8; }
+.g-chip.on { border-color: var(--fire); background: #FFF3EE; color: #7A3000; }
+.g-cb {
+  width: 15px; height: 15px; border: 1.5px solid #ccc;
+  border-radius: 4px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .15s;
+}
+.g-chip.on .g-cb { background: var(--fire); border-color: var(--fire); }
+.g-chip.on .g-cb::after {
+  content: ''; display: block;
+  width: 8px; height: 5px;
+  border-left: 2px solid var(--white); border-bottom: 2px solid var(--white);
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+.reg-btn {
+  width: 100%; padding: 14px;
+  background: var(--fire); color: var(--white);
+  border: none; border-radius: 9px;
+  font-size: 16px; font-weight: 700;
+  font-family: var(--font-body); cursor: pointer;
+  transition: opacity .15s, transform .1s;
+  letter-spacing: .02em;
+}
+.reg-btn:hover { opacity: .9; }
+.reg-btn:active { transform: scale(.98); }
+.form-privacy {
+  font-size: 11px; color: #999; text-align: center;
+  margin-top: 10px; line-height: 1.6;
+}
+
+/* ── SUCCESS ── */
+.success-wrap { display: none; text-align: center; padding: 12px 0; }
+.success-circle {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(43,191,168,.15); border: 2px solid var(--teal-light);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.success-circle svg { width: 28px; height: 28px; }
+.success-wrap h3 {
+  font-family: var(--font-head); font-size: 28px; font-weight: 700;
+  color: var(--black); margin-bottom: 8px;
+}
+.success-wrap p { font-size: 14px; color: #555; line-height: 1.7; }
+.cal-btns { display: flex; gap: 10px; justify-content: center; margin-top: 18px; flex-wrap: wrap; }
+.cal-btn {
+  padding: 9px 18px; border: 1.5px solid #ddd;
+  border-radius: 8px; font-size: 13px; cursor: pointer;
+  background: var(--white); color: #333;
+  font-family: var(--font-body); transition: all .15s;
+}
+.cal-btn:hover { border-color: var(--teal); color: var(--teal); background: #F0F9F8; }
+.ref-wrap {
+  margin-top: 16px; background: #F5F5F5;
+  border-radius: 8px; padding: 12px 14px; text-align: left;
+}
+.ref-label { font-size: 11px; color: #999; margin-bottom: 5px; }
+.ref-url { font-size: 13px; color: var(--teal); font-family: monospace; word-break: break-all; }
+
+/* ── FAQ ── */
+.faq-section { padding: clamp(32px,5vw,56px) clamp(20px,5vw,60px); border-top: 1px solid var(--g700); }
+.faq-inner { max-width: 680px; margin: 0 auto; }
+.faq-heading {
+  font-family: var(--font-head); font-size: clamp(26px,4vw,38px);
+  font-weight: 700; color: var(--white); text-align: center;
+  margin-bottom: 28px;
+}
+.faq-item {
+  border-bottom: 1px solid var(--g700);
+}
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 0; cursor: pointer; gap: 16px;
+}
+.faq-q-text { font-size: 15px; font-weight: 600; color: var(--white); line-height: 1.4; }
+.faq-icon {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--card2); border: 1px solid var(--g700);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: transform .25s, background .2s;
+}
+.faq-item.open .faq-icon { transform: rotate(180deg); background: var(--teal); border-color: var(--teal-mid); }
+.faq-a {
+  font-size: 14px; color: var(--g300); line-height: 1.7;
+  padding-bottom: 16px; display: none;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--card); border-top: 1px solid var(--g700);
+  padding: 28px clamp(20px,5vw,60px);
+  text-align: center;
+}
+.footer-inner { max-width: 860px; margin: 0 auto; }
+.footer-logo {
+  font-family: var(--font-head); font-size: 22px;
+  letter-spacing: 3px; color: var(--fire); margin-bottom: 8px;
+}
+.footer-tagline { font-size: 13px; color: var(--g300); margin-bottom: 16px; }
+.footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+.footer-links a { font-size: 13px; color: var(--g300); text-decoration: none; transition: color .15s; }
+.footer-links a:hover { color: var(--teal-light); }
+.footer-copy { font-size: 12px; color: var(--g500); }
+
+/* ── ANIMATIONS ── */
+.fade-up {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px) {
+  .speaker-stats { grid-template-columns: repeat(3,1fr); }
+  .form-card-wrap { padding: 20px 16px 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">S CENTRAL</div>
+  <a href="#dang-ky" class="nav-cta">Đăng ký miễn phí</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="live-dot"></div>
+      <span class="eyebrow-text">Webinar Miễn Phí · S Central</span>
+      <span class="badge-free">Free 100%</span>
+    </div>
+    <h1>Xây Dựng Thương Hiệu Cá Nhân Trên TikTok —<br><em>Từ Người Không Ai Biết Đến KOC Có Thu Nhập</em></h1>
+    <p class="hero-sub">90 phút thực chiến: học cách định vị bản thân, tạo content authority, xây cộng đồng, và monetize thương hiệu cá nhân — dành cho người chưa có 1 follower nào.</p>
+    <div class="hero-details">
+      <div class="detail-pill">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="2.5" width="13" height="12" rx="2" stroke="rgba(255,255,255,0.7)" stroke-width="1.3"/><path d="M1.5 6.5h13" stroke="rgba(255,255,255,0.7)" stroke-width="1.3"/><path d="M5 1v2M11 1v2" stroke="rgba(255,255,255,0.7)" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Thứ [X], [Ngày]/[Tháng]/2025
+      </div>
+      <div class="detail-pill">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.7)" stroke-width="1.3"/><path d="M8 4.5V8l2.5 2" stroke="rgba(255,255,255,0.7)" stroke-width="1.3" stroke-linecap="round"/></svg>
+        20:00 — 21:30 (giờ Việt Nam)
+      </div>
+      <div class="detail-pill">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="9" rx="1.5" stroke="rgba(255,255,255,0.7)" stroke-width="1.3"/><path d="M5 13l3-2 3 2" stroke="rgba(255,255,255,0.7)" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Zoom · Link gửi sau đăng ký
+      </div>
+      <div class="detail-pill">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4z" stroke="rgba(255,255,255,0.7)" stroke-width="1.3"/><circle cx="8" cy="6" r="1.5" stroke="rgba(255,255,255,0.7)" stroke-width="1.3"/></svg>
+        Giới hạn [XX] người
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="countdown-section">
+  <div class="cd-inner">
+    <div class="cd-label">Webinar bắt đầu trong</div>
+    <div class="cd-grid">
+      <div class="cd-unit"><div class="cd-num" id="cdD">--</div><div class="cd-name">Ngày</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cdH">--</div><div class="cd-name">Giờ</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cdM">--</div><div class="cd-name">Phút</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cdS">--</div><div class="cd-name">Giây</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+  <div class="main-inner">
+
+    <!-- Social proof -->
+    <div class="proof-bar fade-up">
+      <div class="proof-avatars">
+        <div class="proof-av" style="background:#0D4F4F">T</div>
+        <div class="proof-av" style="background:#FF4E00">H</div>
+        <div class="proof-av" style="background:#1A7A6E">M</div>
+        <div class="proof-av" style="background:#854F0B">L</div>
+        <div class="proof-av" style="background:#534AB7">A</div>
+      </div>
+      <div class="proof-text">
+        <strong id="regCount">142</strong> người đã đăng ký · Buổi trước kín chỗ trước 3 ngày
+      </div>
+    </div>
+
+    <!-- What you learn -->
+    <div class="sec fade-up">
+      <div class="sec-label">Bạn sẽ học được</div>
+      <div class="learn-grid">
+        <div class="learn-item">
+          <div class="learn-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#2BBFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="learn-text">Cách định vị bản thân để nổi bật trong 1 lĩnh vực cụ thể</span>
+        </div>
+        <div class="learn-item">
+          <div class="learn-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#2BBFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="learn-text">Hệ thống content 3 tầng: authority → trust → sale</span>
+        </div>
+        <div class="learn-item">
+          <div class="learn-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#2BBFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="learn-text">Script video personal brand thu hút đúng audience</span>
+        </div>
+        <div class="learn-item">
+          <div class="learn-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#2BBFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="learn-text">Cách monetize: khóa học, brand deals, dịch vụ tư vấn</span>
+        </div>
+        <div class="learn-item">
+          <div class="learn-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#2BBFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="learn-text">Lộ trình 90 ngày từ 0 follower đến KOC có hợp đồng</span>
+        </div>
+        <div class="learn-item">
+          <div class="learn-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#2BBFA8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="learn-text">Case study thực tế từ học viên S Central đã làm được</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- For who -->
+    <div class="sec fade-up">
+      <div class="sec-label">Webinar này dành cho</div>
+      <div class="who-grid">
+        <div class="who-card"><span class="who-emoji">🎥</span><div class="who-name">Creator mới</div><div class="who-sub">Chưa biết bắt đầu từ đâu</div></div>
+        <div class="who-card"><span class="who-emoji">🏪</span><div class="who-name">Chủ shop / SME</div><div class="who-sub">Muốn là đại diện thương hiệu</div></div>
+        <div class="who-card"><span class="who-emoji">💼</span><div class="who-name">Marketing exec</div><div class="who-sub">Xây personal brand song song</div></div>
+        <div class="who-card"><span class="who-emoji">📣</span><div class="who-name">Freelancer</div><div class="who-sub">Cần thương hiệu để hút khách</div></div>
+        <div class="who-card"><span class="who-emoji">🎓</span><div class="who-name">Sinh viên</div><div class="who-sub">Xây danh tiếng từ sớm</div></div>
+        <div class="who-card"><span class="who-emoji">🌊</span><div class="who-name">Người miền Trung</div><div class="who-sub">Muốn vươn ra toàn quốc</div></div>
+      </div>
+    </div>
+
+    <!-- Agenda -->
+    <div class="sec fade-up">
+      <div class="sec-label">Chương trình</div>
+      <div class="agenda-list">
+        <div class="ag-item">
+          <div class="ag-left"><div class="ag-time">20:00</div><div class="ag-dot"></div><div class="ag-line"></div></div>
+          <div class="ag-body"><div class="ag-title">Mở đầu & warm-up</div><div class="ag-desc">Giới thiệu, kết nối cộng đồng, poll nhanh về tình trạng hiện tại của mọi người</div></div>
+        </div>
+        <div class="ag-item">
+          <div class="ag-left"><div class="ag-time">20:10</div><div class="ag-dot"></div><div class="ag-line"></div></div>
+          <div class="ag-body"><div class="ag-title">Định vị thương hiệu cá nhân</div><div class="ag-desc">Framework chọn niche, xác định USP, và tạo "góc độ độc quyền" trên TikTok</div></div>
+        </div>
+        <div class="ag-item">
+          <div class="ag-left"><div class="ag-time">20:35</div><div class="ag-dot"></div><div class="ag-line"></div></div>
+          <div class="ag-body"><div class="ag-title">Hệ thống content 3 tầng</div><div class="ag-desc">Authority → Trust → Conversion. Demo live trên tài khoản thực của học viên</div></div>
+        </div>
+        <div class="ag-item">
+          <div class="ag-left"><div class="ag-time">21:00</div><div class="ag-dot"></div><div class="ag-line"></div></div>
+          <div class="ag-body"><div class="ag-title">Monetize & lộ trình 90 ngày</div><div class="ag-desc">Cách tạo thu nhập từ thương hiệu cá nhân + lộ trình cụ thể theo từng giai đoạn</div></div>
+        </div>
+        <div class="ag-item">
+          <div class="ag-left"><div class="ag-time">21:20</div><div class="ag-dot"></div></div>
+          <div class="ag-body"><div class="ag-title">Q&A trực tiếp</div><div class="ag-desc">Trả lời câu hỏi + giới thiệu chương trình Mentorship S Central (không bắt buộc)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Speaker -->
+    <div class="sec fade-up">
+      <div class="sec-label">Diễn giả</div>
+      <div class="speaker-wrap">
+        <div class="speaker-top">
+          <div class="speaker-avatar">S</div>
+          <div>
+            <div class="speaker-name">Sang — Founder S Central</div>
+            <div class="speaker-role">TikTok & Personal Brand Coach · Miền Trung Việt Nam</div>
+          </div>
+        </div>
+        <p class="speaker-bio">Người đã xây dựng thương hiệu cá nhân từ 0 và trở thành giọng nói dẫn đầu về TikTok tại miền Trung. Đã đào tạo hơn 500 creator và SME — không lý thuyết, chỉ hệ thống được kiểm chứng bằng kết quả thực và con số thật.</p>
+        <div class="speaker-stats">
+          <div class="sp-stat"><div class="sp-stat-n">500+</div><div class="sp-stat-l">Học viên</div></div>
+          <div class="sp-stat"><div class="sp-stat-n">10M+</div><div class="sp-stat-l">Views tạo ra</div></div>
+          <div class="sp-stat"><div class="sp-stat-n">3 năm</div><div class="sp-stat-l">Thực chiến</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FORM -->
+<section class="form-section" id="dang-ky">
+  <div class="form-inner">
+    <div class="form-header">
+      <h2>Đăng Ký Giữ Chỗ</h2>
+      <p>Hoàn toàn miễn phí · Zoom link gửi qua email</p>
+      <div class="spots">Còn <strong id="spotsLeft">&nbsp;38&nbsp;</strong> chỗ trống</div>
+    </div>
+    <div class="form-card-wrap">
+      <div id="regForm">
+        <div class="spots-alert">
+          <div class="sa-dot"></div>
+          <div class="sa-text"><strong id="recentReg">23 người</strong> vừa đăng ký trong 1 giờ qua</div>
+        </div>
+        <div class="fld">
+          <label>Họ và tên <span class="req">*</span></label>
+          <input type="text" id="fn" placeholder="Nguyễn Văn A" oninput="clr(this)">
+          <div class="errmsg" id="e-fn">Vui lòng nhập họ tên</div>
+        </div>
+        <div class="fld">
+          <label>Số điện thoại <span class="req">*</span></label>
+          <input type="tel" id="ph" placeholder="0901 234 567" oninput="clr(this)">
+          <div class="errmsg" id="e-ph">Số không hợp lệ (9–11 chữ số)</div>
+        </div>
+        <div class="fld">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="em" placeholder="ban@email.com" oninput="clr(this)">
+          <div class="errmsg" id="e-em">Email không hợp lệ</div>
+        </div>
+        <div class="fld">
+          <label>Thành phố</label>
+          <select id="ct">
+            <option value="">— Chọn thành phố —</option>
+            <option>Đà Nẵng</option><option>Huế</option><option>Đà Lạt</option>
+            <option>Quảng Nam</option><option>Quảng Ngãi</option>
+            <option>Hà Nội</option><option>TP. Hồ Chí Minh</option><option>Khác</option>
+          </select>
+        </div>
+        <div class="goal-label">Mục tiêu sau webinar này?</div>
+        <div class="goal-grid">
+          <button type="button" class="g-chip" onclick="tog(this)"><div class="g-cb"></div>Xây kênh TikTok cá nhân</button>
+          <button type="button" class="g-chip" onclick="tog(this)"><div class="g-cb"></div>Trở thành KOC / influencer</button>
+          <button type="button" class="g-chip" onclick="tog(this)"><div class="g-cb"></div>Bán hàng qua personal brand</button>
+          <button type="button" class="g-chip" onclick="tog(this)"><div class="g-cb"></div>Tăng thu nhập từ content</button>
+        </div>
+        <button class="reg-btn" onclick="doReg()">Giữ Chỗ Ngay — Miễn Phí →</button>
+        <p class="form-privacy">Thông tin bảo mật tuyệt đối · Link Zoom + tài liệu gửi qua email trước 1 giờ · Không spam</p>
+      </div>
+      <div class="success-wrap" id="regOK">
+        <div class="success-circle">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M5 14l6 6L23 8" stroke="#2BBFA8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Giữ chỗ thành công!</h3>
+        <p>S Central sẽ gửi <strong>link Zoom + tài liệu chuẩn bị</strong><br>qua email trong <strong>15 phút</strong>.<br><br>Thêm vào lịch để không bỏ lỡ:</p>
+        <div class="cal-btns">
+          <button class="cal-btn">Google Calendar</button>
+          <button class="cal-btn">iCal / Outlook</button>
+        </div>
+        <div class="ref-wrap">
+          <div class="ref-label">Chia sẻ link đăng ký cho bạn bè:</div>
+          <div class="ref-url">scentral.vn/webinar/thuong-hieu-ca-nhan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2 class="faq-heading">Câu hỏi thường gặp</h2>
+    <div class="faq-item"><div class="faq-q" onclick="faqTog(this.parentElement)"><span class="faq-q-text">Webinar này hoàn toàn miễn phí không?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg></div></div><div class="faq-a">Hoàn toàn miễn phí 100%. Bạn chỉ cần đăng ký giữ chỗ vì số lượng có giới hạn. Không có phí ẩn hay upsell bắt buộc trong suốt buổi học.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="faqTog(this.parentElement)"><span class="faq-q-text">Tôi chưa có TikTok, có tham gia được không?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg></div></div><div class="faq-a">Hoàn toàn phù hợp — webinar này được thiết kế cho người bắt đầu từ 0. Bạn sẽ rời đi với lộ trình rõ ràng và hành động cụ thể để khởi động kênh ngay hôm sau.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="faqTog(this.parentElement)"><span class="faq-q-text">Nếu bận không xem live được thì sao?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg></div></div><div class="faq-a">S Central sẽ gửi bản ghi lại qua email cho tất cả người đã đăng ký — nhưng chỉ trong vòng 48 giờ sau buổi live. Xem live vẫn tốt hơn vì có thể đặt câu hỏi trực tiếp với Sang.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="faqTog(this.parentElement)"><span class="faq-q-text">Sau webinar có bán khóa học không?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg></div></div><div class="faq-a">Có — 10 phút cuối S Central sẽ giới thiệu chương trình Mentorship 1:1 dành cho những ai muốn đi sâu hơn. Hoàn toàn không bắt buộc, nội dung webinar có giá trị độc lập.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="faqTog(this.parentElement)"><span class="faq-q-text">Webinar tổ chức qua nền tảng nào?</span><div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg></div></div><div class="faq-a">Zoom. Link tham gia sẽ được gửi qua email sau khi bạn đăng ký thành công, và nhắc lại 1 giờ trước khi bắt đầu. Bạn không cần tài khoản Zoom để tham gia.</div></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">S CENTRAL</div>
+    <div class="footer-tagline">TikTok & Content Growth Hub · Miền Trung Việt Nam</div>
+    <div class="footer-links">
+      <a href="#">Trang chủ</a>
+      <a href="#">Khóa học</a>
+      <a href="#">Creator Hub</a>
+      <a href="#">Liên hệ</a>
+      <a href="#">TikTok @scentral.vn</a>
+    </div>
+    <div class="footer-copy">© 2025 S Central · Shape · Sang · Social · Scale</div>
+  </div>
+</footer>
+
+<script>
+/* ── COUNTDOWN ── */
+/* TODO: Thay bằng ngày giờ thật khi có lịch cố định */
+var wDate = new Date();
+wDate.setDate(wDate.getDate() + 21);
+wDate.setHours(20, 0, 0, 0);
+
+function tick() {
+  var diff = Math.max(0, wDate - new Date());
+  var d = Math.floor(diff / 864e5);
+  var h = Math.floor((diff % 864e5) / 36e5);
+  var m = Math.floor((diff % 36e5) / 6e4);
+  var s = Math.floor((diff % 6e4) / 1e3);
+  document.getElementById('cdD').textContent = String(d).padStart(2,'0');
+  document.getElementById('cdH').textContent = String(h).padStart(2,'0');
+  document.getElementById('cdM').textContent = String(m).padStart(2,'0');
+  document.getElementById('cdS').textContent = String(s).padStart(2,'0');
+}
+tick();
+setInterval(tick, 1000);
+
+/* ── SPOTS COUNTER ── */
+var spots = 38, regs = 142;
+setInterval(function() {
+  if (spots > 20 && Math.random() > 0.65) {
+    spots--; regs++;
+    var sl = document.getElementById('spotsLeft');
+    var rc = document.getElementById('regCount');
+    if (sl) sl.textContent = '\u00a0' + spots + '\u00a0';
+    if (rc) rc.textContent = regs;
+  }
+}, 9000);
+
+/* ── FORM ── */
+function clr(el) {
+  el.classList.remove('err');
+  var e = document.getElementById('e-' + el.id);
+  if (e) e.classList.remove('on');
+}
+function shErr(id) {
+  var el = document.getElementById(id);
+  if (el) el.classList.add('err');
+  var e = document.getElementById('e-' + id);
+  if (e) e.classList.add('on');
+}
+function tog(el) { el.classList.toggle('on'); }
+function faqTog(el) { el.classList.toggle('open'); }
+
+function doReg() {
+  var ok = true;
+  var fn = document.getElementById('fn');
+  var ph = document.getElementById('ph');
+  var em = document.getElementById('em');
+  if (!fn.value.trim()) { shErr('fn'); ok = false; }
+  var pv = ph.value.replace(/\D/g,'');
+  if (!pv || pv.length < 9 || pv.length > 11) { shErr('ph'); ok = false; }
+  var ev = em.value.trim();
+  if (!ev || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ev)) { shErr('em'); ok = false; }
+  if (!ok) return;
+
+  /* TODO: Thay bằng Formspree endpoint hoặc Google Form action thật */
+  /* fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(form) }) */
+
+  document.getElementById('regForm').style.display = 'none';
+  document.getElementById('regOK').style.display = 'block';
+  if (spots > 0) { spots--; var sl = document.getElementById('spotsLeft'); if (sl) sl.textContent = '\u00a0' + spots + '\u00a0'; }
+}
+
+/* ── SCROLL ANIMATIONS ── */
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(function(el) { obs.observe(el); });
+</script>
+</body>
+</html>
